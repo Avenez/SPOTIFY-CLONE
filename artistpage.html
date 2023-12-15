@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ArtistPage</title>
+        <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+        />
+    </head>
+    <body>
+        <section class="container-fluid m-auto">
+            <div class="row">
+                <div class="col-auto d-inline-block d-lg-none bg-black">
+                    <a
+                        class="btn btn-dark bg-transparent border-0 mt-3"
+                        data-bs-toggle="offcanvas"
+                        href="#offcanvasExample"
+                        role="button"
+                        aria-controls="offcanvasExample"
+                        ><i class="bi bi-three-dots-vertical"></i>
+                    </a>
+                </div>
+
+                <!-- --------------------OFF CANVAS ---------------------------->
+
+                <div
+                    class="offcanvas offcanvas-start bg-black text-bg-danger d-lg-none"
+                    tabindex="-1"
+                    id="offcanvasExample"
+                    aria-labelledby="offcanvasExampleLabel"
+                >
+                    <div class="offcanvas-header justify-content-end">
+                        <button type="button" class="btn-close me-3" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="bi bi-x-lg btn btn-dark"></i>
+                        </button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <div class="container">
+                            <nav class="border-1 border-bottom border-secondary">
+                                <ul class="menu-1 ps-0">
+                                    <a href="index.html"
+                                        ><li class="mb-2">
+                                            <i class="bi bi-house fs-3 me-3 text-white"></i><span>Home</span>
+                                        </li></a
+                                    >
+                                    <li class="mb-2">
+                                        <i class="bi bi-search fs-3 me-3 text-white"></i
+                                        ><a class="navAnchor" href=""><span class="">Cerca</span></a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <i class="bi bi-collection-play fs-3 me-3 text-white"></i
+                                        ><a class="navAnchor" href=""><span class=""> La tua Libreria</span></a>
+                                    </li>
+                                </ul>
+
+                                <ul class="menu-2 mt-4 ps-0">
+                                    <li class="mb-3">
+                                        <i class="bi bi-plus-lg me-3 text-black plus"></i
+                                        ><a class="mb-1 navAnchor" href=""><span class="">Crea playlist</span></a>
+                                    </li>
+                                    <li class="mb-3">
+                                        <i class="bi bi-heart-fill me-3 text-white heart"></i
+                                        ><a class="mb-1 navAnchor" href=""
+                                            ><span class="">Brani che ti piacciono</span></a
+                                        >
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-bookmark-fill me-3 text-success label"></i
+                                        ><a class="mb-1 navAnchor" href=""><span class="">I tuoi episodi</span></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <div class="cont-1 mt-3">
+                            <!-- <div class="playlists text-white ps-3 fs-7"> -->
+                            <ul class="d-lg-none text-white ps-3 fs-5">
+                                <li class="mb-3">
+                                    <a class="navAnchor">early stage emily syndrome (sett-ott 2022)</a>
+                                </li>
+                                <li class="mb-3"><a class="navAnchor">Young TheBe</a></li>
+                                <li class="mb-3"><a class="navAnchor">" ... " cit. Kimiko (lug-ago 2022)</a></li>
+                                <li class="mb-3"><a class="navAnchor">saggio vibes 🦄</a></li>
+                                <li class="mb-3"><a class="navAnchor">main character energy (mag-giu 2022)</a></li>
+                                <li class="mb-3"><a class="navAnchor">that fucking mood✏️</a></li>
+                                <li class="mb-3"><a class="navAnchor">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</a></li>
+                                <li class="mb-3"><a class="navAnchor">An Emily Winchester kind of mood 🐸</a></li>
+                                <li class="mb-3"><a class="navAnchor">landing page (mar-apr 2022)</a></li>
+                                <li class="mb-3"><a class="navAnchor">2021 lol</a></li>
+                                <li class="mb-3">
+                                    <a class="navAnchor">cosa cazzo vuol dire questa affermazione (gen-feb)</a>
+                                </li>
+                                <li class="mb-3"><a class="navAnchor">honey and glass (nov-dic 2021)</a></li>
+                                <li class="mb-3"><a class="navAnchor">(Revenge) Training Arc h🦍</a></li>
+                                <li class="mb-3"><a class="navAnchor">Lidia 🤝 Emily</a></li>
+                                <li class="mb-3">
+                                    <a class="navAnchor">minecraft e nintendo switch (sep-oct 2021)</a>
+                                </li>
+                                <li class="mb-3">
+                                    <a class="navAnchor">silvano d'orba? I hardly know her (lug - ago 2021)</a>
+                                </li>
+                                <li class="mb-3"><a class="navAnchor">Culo 2021</a></li>
+                                <li class="mb-3"><a class="navAnchor">Frah Quintale Mix</a></li>
+                                <li class="mb-3"><a class="navAnchor">Francesco Guccini Mix</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -------------------------------------------------------- -->
+                <!-- -----------------MENU NOT CANVAS -------------------------->
+
+                <div class="col-3 bg-black d-none d-lg-inline-block notCanvas">
+                    <!--QUESTO IN JS DEVE DIVENTARE COL-1-->
+                    <div class="container">
+                        <button
+                            class="menuBtn btn button border-0 bg-black px-0 fs-3"
+                            type="button"
+                            data-bs-toggle="navTry"
+                            data-bs-target="#collapseNav"
+                        >
+                            <i class="bi bi-three-dots"></i>
+                        </button>
+                        <nav class="border-1 border-bottom border-secondary">
+                            <ul class="menu-1 ps-0">
+                                <a href="index.html"
+                                    ><li class="mb-2">
+                                        <i class="bi bi-house fs-3 me-3 text-white"></i
+                                        ><span class="text-light">Home</span>
+                                    </li></a
+                                >
+                                <li class="mb-2">
+                                    <a class="navAnchor" href=""
+                                        ><i class="bi bi-search fs-3 me-3 text-white"></i
+                                        ><span class="d-none d-md-inline-block">Cerca</span></a
+                                    >
+                                </li>
+                                <li class="mb-2">
+                                    <a class="navAnchor" href=""
+                                        ><i class="bi bi-collection-play fs-3 me-3 text-white"></i
+                                        ><span class="d-none d-md-inline-block"> La tua Libreria</span></a
+                                    >
+                                </li>
+                            </ul>
+
+                            <ul class="menu-2 mt-4 ps-0">
+                                <li class="mb-3">
+                                    <a class="mb-1 navAnchor" href=""
+                                        ><i class="bi bi-plus-lg me-3 text-black plus"></i
+                                        ><span class="d-none d-md-inline-block">Crea playlist</span></a
+                                    >
+                                </li>
+                                <li class="mb-3">
+                                    <a class="mb-1 navAnchor" href=""
+                                        ><i class="bi bi-heart-fill me-3 text-white heart"></i
+                                        ><span class="d-none d-md-inline-block">Brani che ti piacciono</span></a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="mb-1 navAnchor" href=""
+                                        ><i class="bi bi-bookmark-fill me-3 text-success label"></i
+                                        ><span class="d-none d-md-inline-block">I tuoi episodi</span></a
+                                    >
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="cont-1 mt-3">
+                        <ul class="playlists d-none d-md-inline-block text-white ps-3 fs-7">
+                            <li class="mb-3"><a class="navAnchor">early stage emily syndrome (sett-ott 2022)</a></li>
+                            <li class="mb-3"><a class="navAnchor">Young TheBe</a></li>
+                            <li class="mb-3"><a class="navAnchor">" ... " cit. Kimiko (lug-ago 2022)</a></li>
+                            <li class="mb-3"><a class="navAnchor">saggio vibes 🦄</a></li>
+                            <li class="mb-3"><a class="navAnchor">main character energy (mag-giu 2022)</a></li>
+                            <li class="mb-3"><a class="navAnchor">that fucking mood✏️</a></li>
+                            <li class="mb-3"><a class="navAnchor">VEE, CARLOTTA E GIACOMO VANNO A BOSIO</a></li>
+                            <li class="mb-3"><a class="navAnchor">An Emily Winchester kind of mood 🐸</a></li>
+                            <li class="mb-3"><a class="navAnchor">landing page (mar-apr 2022)</a></li>
+                            <li class="mb-3"><a class="navAnchor">2021 lol</a></li>
+                            <li class="mb-3">
+                                <a class="navAnchor">cosa cazzo vuol dire questa affermazione (gen-feb)</a>
+                            </li>
+                            <li class="mb-3"><a class="navAnchor">honey and glass (nov-dic 2021)</a></li>
+                            <li class="mb-3"><a class="navAnchor">(Revenge) Training Arc h🦍</a></li>
+                            <li class="mb-3"><a class="navAnchor">Lidia 🤝 Emily</a></li>
+                            <li class="mb-3"><a class="navAnchor">minecraft e nintendo switch (sep-oct 2021)</a></li>
+                            <li class="mb-3">
+                                <a class="navAnchor">silvano d'orba? I hardly know her (lug - ago 2021)</a>
+                            </li>
+                            <li class="mb-3"><a class="navAnchor">Culo 2021</a></li>
+                            <li class="mb-3"><a class="navAnchor">Frah Quintale Mix</a></li>
+                            <li class="mb-3"><a class="navAnchor">Francesco Guccini Mix</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- -----------------------COL 7 CENTRALE--------------------------- -->
+                <div class="col">
+                    <div class="row">
+                        <!-- Background image -->
+                        <div
+                            id="js-img-sfondo-autore"
+                            class="bg-image w-100"
+                            style="
+                                background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+                                height: 100%;
+                            "
+                        >
+                            <!-- Background image -->
+                            <div class="d-flex flex-column">
+                                <div class="d-flex m-3 align-items-center mb-6 flex-wrap">
+                                    <div class="d-flex w-50 gap-3">
+                                        <button class="btn">
+                                            <div class="rounded-circle secondary-light d-flex p-1">
+                                                <svg
+                                                    style="width: 20px"
+                                                    data-encore-id="icon"
+                                                    role="img"
+                                                    aria-hidden="true"
+                                                    class="Svg-sc-ytk21e-0 kgVuXA IYDlXmBmmUKHveMzIPCF"
+                                                    viewBox="0 0 16 16"
+                                                >
+                                                    <path
+                                                        d="M11.03.47a.75.75 0 0 1 0 1.06L4.56 8l6.47 6.47a.75.75 0 1 1-1.06 1.06L2.44 8 9.97.47a.75.75 0 0 1 1.06 0z"
+                                                    ></path>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                        <button class="btn">
+                                            <div class="rounded-circle secondary-light d-flex p-1">
+                                                <svg
+                                                    style="width: 20px"
+                                                    data-encore-id="icon"
+                                                    role="img"
+                                                    aria-hidden="true"
+                                                    class="Svg-sc-ytk21e-0 kgVuXA IYDlXmBmmUKHveMzIPCF"
+                                                    viewBox="0 0 16 16"
+                                                >
+                                                    <path
+                                                        d="M4.97.47a.75.75 0 0 0 0 1.06L11.44 8l-6.47 6.47a.75.75 0 1 0 1.06 1.06L13.56 8 6.03.47a.75.75 0 0 0-1.06 0z"
+                                                    ></path>
+                                                </svg>
+                                            </div>
+                                        </button>
+                                        <!-- <input
+                                            id="searchArtist"
+                                            type="text"
+                                            class="form-control bg-transparent text-light"
+                                            placeholder=" inserisci nome artista..."
+                                            aria-label="Example text with button addon"
+                                            aria-describedby="js-button-search"
+                                        /> -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h6 class="m-0 mt-5">
+                                    <div class="d-inline">
+                                        <img
+                                            style="width: 17px; height: 17px"
+                                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/2048px-Twitter_Verified_Badge.svg.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="d-inline text-shadow-sm">prova artista verificato</div>
+                                </h6>
+
+                                <h1 id="js-h1-artist" class="display-1 fw-bold text-shadow">titolo artista</h1>
+                                <h6 id="monthListeners" class="my-3 text-shadow-sm">(valore js) ascoltatori mensili</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gradient-spotify">
+                        <div class="col-12">
+                            <div class="d-flex align-items-center gap-3 p-2 flex-wrap">
+                                <button class="btn rounded">
+                                    <i class="bi bi-play-circle-fill text-light fs-1"></i>
+                                </button>
+                                <button type="button" class="btn border px-2 py-1 text-light text-uppercase fs-7">
+                                    Following
+                                </button>
+
+                                <div class="btn-group">
+                                    <button
+                                        type="button"
+                                        class="btn dropdown border-0"
+                                        data-bs-toggle="dropdown"
+                                        data-bs-display="static"
+                                        aria-expanded="false"
+                                    >
+                                        <i class="bi bi-three-dots fs-3 text-white"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-lg-start">
+                                        <li><button class="dropdown-item" type="button">Action</button></li>
+                                        <li><button class="dropdown-item" type="button">Another action</button></li>
+                                        <li>
+                                            <button class="dropdown-item" type="button">Something else here</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row overflow-section">
+                            <div class="col-12 d-xxl-none col-xxl-4">
+                                <div id="part1">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="col-12">
+                                                <div class="my-4 d-flex">
+                                                    <h4 class="text-light">brani che ti piacciono</h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="row align-items-center">
+                                                <div class="col-3 col-md-2 col-lg-2 col-xxl-3">
+                                                    <div class="position-relative" style="width: 70px; height: 70px">
+                                                        <span
+                                                            style="width: 20px; height: 20px"
+                                                            class="position-absolute bottom-0 end-0 translate-middle bg-success border border-light rounded-circle d-flex align-items-center justify-content-center"
+                                                            ><i class="bi bi-heart-fill text-light fs-8"></i>
+                                                        </span>
+                                                        <img style="width: 60px; height: 60px;" class="rounded-circle
+                                                        js-img-likedSongs"
+                                                        src=https://images.unsplash.com/photo-1682687982502-b05f0565753a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                                                        alt="immagine" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-9 col-md-10 col-lg-10 col-xxl-9">
+                                                    <div class="text-light">
+                                                        <div><p class="m-0 fw-bold commento1"></p></div>
+                                                        <div class="fs-7">
+                                                            <p class="m-0 commento2"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-xxl-8">
+                                <div id="part2">
+                                    <div id="js-box-inner-part2" class="col-12">
+                                        <div class="row"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-none col-12 d-xxl-block col-xxl-4">
+                                <div id="part1">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="col-12">
+                                                <div class="my-4 d-flex">
+                                                    <h4 class="text-light">brani che ti piacciono</h4>
+                                                </div>
+                                            </div>
+
+                                            <div class="row align-items-center">
+                                                <div class="col-3 col-md-2 col-lg-2 col-xxl-3">
+                                                    <div class="position-relative" style="width: 70px; height: 70px">
+                                                        <span
+                                                            style="width: 20px; height: 20px"
+                                                            class="position-absolute bottom-0 end-0 translate-middle bg-success border border-light rounded-circle d-flex align-items-center justify-content-center"
+                                                            ><i class="bi bi-heart-fill text-light fs-8"></i>
+                                                        </span>
+                                                        <img style="width: 60px; height: 60px;" class="rounded-circle
+                                                        js-img-likedSongs"
+                                                        src=https://images.unsplash.com/photo-1682687982502-b05f0565753a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                                                        alt="immagine" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-9 col-md-10 col-lg-10 col-xxl-9">
+                                                    <div class="text-light">
+                                                        <div><p class="m-0 fw-bold commento1"></p></div>
+                                                        <div class="fs-7">
+                                                            <p class="m-0 commento2"></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="text-light mx-1 my-5">
+                                    <p>
+                                        <button
+                                            class="btn text-light"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseVisualizzaAltro"
+                                            aria-expanded="false"
+                                            aria-controls="collapseWidthExample"
+                                        >
+                                            Visualizza Altro
+                                        </button>
+                                    </p>
+                                    <div style="min-height: 120px">
+                                        <div class="collapse collapse-horizontal" id="collapseVisualizzaAltro">
+                                            <div class="card card-body gradient-spotify">
+                                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quae
+                                                nisi obcaecati, molestias omnis magnam sint. Magnam dolorem quod optio.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ---------------------------------------------------------------- -->
+                <!-- -----------------------FRIEND MENU------------------------------ -->
+
+                <!-- --------------AMICI OFF CANVAS --------------------------------------- -->
+                <div class="col-auto d-inline-block d-lg-none bg-black">
+                    <a
+                        class="btn btn-dark bg-transparent border-0 mt-3"
+                        data-bs-toggle="offcanvas"
+                        href="#offcanvas2"
+                        role="button"
+                        aria-controls="offcanvas2"
+                        ><i class="bi bi-person"></i>
+                    </a>
+                </div>
+
+                <div
+                    class="offcanvas offcanvas-end bg-black text-bg-danger d-lg-none"
+                    tabindex="-1"
+                    id="offcanvas2"
+                    aria-labelledby="offcanvasExampleLabel"
+                >
+                    <div class="offcanvas-header justify-content-start">
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <i class="bi bi-x-lg btn btn-dark"></i>
+                        </button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <div class="container">
+                            <div class="row text-white align-items-center mt-3">
+                                <div class="col">
+                                    <h5 class="">Attività Amici</h5>
+                                </div>
+                                <div class="col-1">
+                                    <a class="button" href=""><i class="bi bi-person-add fs-4"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- --------------AMICO 1---------------------- -->
+                            <div class="row friends mt-4 mb-3 text-white">
+                                <div class="col-2 mb-xxl-0">
+                                    <a href=""
+                                        ><img
+                                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                                            alt="profilePic"
+                                    /></a>
+                                </div>
+                                <div class="col-7 ms-3 p-0">
+                                    <a class="navAnchor" href=""><h6>Ziegler Natta</h6></a>
+                                    <a class="navAnchor" href=""
+                                        ><p class="fs-8 mb-0">In Camera <i class="bi bi-dot"></i> Marlon Brando</p></a
+                                    >
+                                    <a class="navAnchor" href=""
+                                        ><p class="ms-0 fs-7"><i class="bi bi-music-note-beamed"></i> EP III</p></a
+                                    >
+                                </div>
+                                <div class="col-2 p-0">
+                                    <p class="fs-8">8 ore</p>
+                                </div>
+                            </div>
+
+                            <!-- --------------AMICO 2---------------------- -->
+                            <div class="row friends mt-4 mb-3 text-white">
+                                <div class="col-2 mb-xxl-0">
+                                    <a href=""
+                                        ><img
+                                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                                            alt="profilePic"
+                                    /></a>
+                                </div>
+                                <div class="col-7 ms-3 p-0">
+                                    <a class="navAnchor" href=""><h6>Ziegler Natta</h6></a>
+                                    <a class="navAnchor" href=""
+                                        ><p class="fs-8 mb-0">In Camera <i class="bi bi-dot"></i> Marlon Brando</p></a
+                                    >
+                                    <a class="navAnchor" href=""
+                                        ><p class="ms-0 fs-7"><i class="bi bi-music-note-beamed"></i> EP III</p></a
+                                    >
+                                </div>
+                                <div class="col-2 p-0">
+                                    <p class="fs-8">8 ore</p>
+                                </div>
+                            </div>
+                            <!-- --------------AMICO 3---------------------- -->
+                            <div class="row friends mt-4 mb-3 text-white">
+                                <div class="col-2 mb-xxl-0">
+                                    <a href=""
+                                        ><img
+                                            src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                                            alt="profilePic"
+                                    /></a>
+                                </div>
+                                <div class="col-7 ms-3 p-0">
+                                    <a class="navAnchor" href=""><h6>Ziegler Natta</h6></a>
+                                    <a class="navAnchor" href=""
+                                        ><p class="fs-8 mb-0">In Camera <i class="bi bi-dot"></i> Marlon Brando</p></a
+                                    >
+                                    <a class="navAnchor" href=""
+                                        ><p class="ms-0 fs-7"><i class="bi bi-music-note-beamed"></i> EP III</p></a
+                                    >
+                                </div>
+                                <div class="col-2 p-0">
+                                    <p class="fs-8">8 ore</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -----------------AMICI NOT CANVAS ---------------------------------->
+
+                <div class="col-2 bg-black d-none d-lg-inline-block notCanvas">
+                    <div class="container">
+                        <div class="row text-white align-items-center mt-3">
+                            <div class="col">
+                                <h5 class="">Attività Amici</h5>
+                            </div>
+                            <div class="col-1">
+                                <a class="button" href=""><i class="bi bi-person-add fs-4"></i></a>
+                            </div>
+                            <div class="col-1 mx-2">
+                                <a class="button" href=""><i class="bi bi-x fs-4"></i> </a>
+                            </div>
+                        </div>
+
+                        <!-- --------------AMICO 1---------------------- -->
+                        <div class="row friends mt-4 mb-3 text-white">
+                            <div class="col-12 col-xxl-2 mb-3 mb-xxl-0">
+                                <a href=""
+                                    ><img
+                                        src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                                        alt="profilePic"
+                                /></a>
+                            </div>
+                            <div class="col-12 col-xxl-7 ms-3 p-0">
+                                <a class="navAnchor" href=""><h6>Ziegler Natta</h6></a>
+                                <a class="navAnchor" href=""
+                                    ><p class="fs-8 mb-0">In Camera <i class="bi bi-dot"></i> Marlon Brando</p></a
+                                >
+                                <a class="navAnchor" href=""
+                                    ><p class="ms-0 fs-7"><i class="bi bi-music-note-beamed"></i> EP III</p></a
+                                >
+                            </div>
+                            <div class="col-2 p-0 d-none d-xxl-inline-block">
+                                <p class="fs-8">8 ore</p>
+                            </div>
+                        </div>
+
+                        <!-- --------------AMICO 2---------------------- -->
+                        <div class="row friends mt-4 mb-3 text-white">
+                            <div class="col-12 col-xxl-2 mb-3 mb-xxl-0">
+                                <a href=""
+                                    ><img
+                                        src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                                        alt="profilePic"
+                                /></a>
+                            </div>
+                            <div class="col-12 col-xxl-7 ms-3 p-0">
+                                <a class="navAnchor" href=""><h6>Ziegler Natta</h6></a>
+                                <a class="navAnchor" href=""
+                                    ><p class="fs-8 mb-0">In Camera <i class="bi bi-dot"></i> Marlon Brando</p></a
+                                >
+                                <a class="navAnchor" href=""
+                                    ><p class="ms-0 fs-7"><i class="bi bi-music-note-beamed"></i> EP III</p></a
+                                >
+                            </div>
+                            <div class="col-2 p-0 d-none d-xxl-inline-block">
+                                <p class="fs-8">8 ore</p>
+                            </div>
+                        </div>
+                        <!-- --------------AMICO 3---------------------- -->
+                        <div class="row friends mt-4 mb-3 text-white">
+                            <div class="col-12 col-xxl-2 mb-3 mb-xxl-0">
+                                <a href=""
+                                    ><img
+                                        src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+                                        alt="profilePic"
+                                /></a>
+                            </div>
+                            <div class="col-12 col-xxl-7 ms-3 p-0">
+                                <a class="navAnchor" href=""><h6>Ziegler Natta</h6></a>
+                                <a class="navAnchor" href=""
+                                    ><p class="fs-8 mb-0">In Camera <i class="bi bi-dot"></i> Marlon Brando</p></a
+                                >
+                                <a class="navAnchor" href=""
+                                    ><p class="ms-0 fs-7"><i class="bi bi-music-note-beamed"></i> EP III</p></a
+                                >
+                            </div>
+                            <div class="col-2 p-0 d-none d-xxl-inline-block">
+                                <p class="fs-8">8 ore</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <div class="bg-dark text-light d-flex align-items-lg-center justify-content-between position-sticky bottom-0">
+            <section class="container-fluid mx-0">
+                <footer class="row">
+                    <div class="col">
+                        <div class="d-flex align-items-center h-100 gap-2 visually-hidden footer-left">
+                            <div class="js-img-footer">
+                                <img src="" alt="prova prova" />
+                            </div>
+                            <div class="d-flex flex-column js-name-choosen-song">
+                                <div>
+                                    <h5>Lorem, ipsum.</h5>
+                                </div>
+                            </div>
+                            <div>
+                                <i class="bi bi-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div
+                            class="d-flex flex-column justify-content-center align-items-center h-100 p-1 visually-hidden footer-middle"
+                        >
+                            <!-- LETTORE QUI DENTRO  -->
+                            <div id="musicPlayer" class="p-2">
+                                <audio id="audio" src=""></audio>
+                                <div id="controls">
+                                    <button class="rounded-circle" id="play-btn">
+                                        <i class="bi bi-play-fill"></i>
+                                    </button>
+                                    <button class="rounded-circle" id="pause-btn">
+                                        <i class="bi bi-pause"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center gap-1">
+                                <div id="progressoNumber"></div>
+                                <div>
+                                    <input id="playerBar" type="range" style="width: 300px; accent-color: #373c41" />
+                                </div>
+                                <div id="durataTotale"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="d-flex align-items-center h-100 justify-content-end">
+                            <div class="d-flex gap-2 align-items-center footer-right visually-hidden">
+                                <div><p class="m-0 fs-5">min</p></div>
+                                <button id="toggleAudio" class="bg-transparent border-0 text-light">
+                                    <i id="js-volume-icon" class="bi bi-volume-down-fill fs-3"></i>
+                                </button>
+                                <input
+                                    type="range"
+                                    id="volume"
+                                    min="0"
+                                    max="1"
+                                    step="0.1"
+                                    value="0.5"
+                                    style="accent-color: #373c41"
+                                />
+
+                                <div><p class="m-0 fs-5">max</p></div>
+                                <i class="bi bi-arrows-fullscreen fs-5 ms-3"></i>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </section>
+        </div>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"
+        ></script>
+        <script src="./assets/js/artistpage.js" type="module"></script>
+    </body>
+</html>

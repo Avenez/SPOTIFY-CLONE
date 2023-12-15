@@ -1,0 +1,109 @@
+@import "../bootstrap/scss/mixins/banner";
+@include bsBanner("");
+
+// scss-docs-start import-stack
+// Configuration
+@import "../bootstrap/scss/functions";
+
+$danger: #ff0077;
+$info: #00ffea;
+$light: #f3eeff;
+
+@import "../bootstrap/scss/variables";
+
+// add custom di font sizes alla map
+$h7-font-size: $font-size-base * 0.8;
+$h8-font-size: $font-size-base * 0.6;
+$h9-font-size: $font-size-base * 0.4;
+$h10-font-size: $font-size-base * 0.2;
+
+$new-font-sizes: (
+    7: $h7-font-size,
+    8: $h8-font-size,
+    9: $h9-font-size,
+    10: $h10-font-size,
+);
+
+$font-sizes: map-merge(
+    $map1: $font-sizes,
+    $map2: $new-font-sizes,
+);
+
+$border-widths-new: (
+    6: 6px,
+    7: 7px,
+    8: 8px,
+    9: 9px,
+    10: 10px,
+);
+
+$border-widths: map-merge(
+    $map1: $border-widths,
+    $map2: $border-widths-new,
+);
+
+$colors-new: (
+    "epicode-1": #5726c3,
+    "epicode-2": #8625a5,
+    "epicode-3": #cb2376,
+);
+
+$colors: map-merge(
+    $map1: $colors-new,
+    $map2: $colors,
+);
+
+$theme-colors-new: (
+    "epicode-1": #5726c3,
+    "epicode-2": #8625a5,
+    "epicode-3": #cb2376,
+);
+
+$theme-colors: map-merge(
+    $map1: $theme-colors-new,
+    $map2: $theme-colors,
+);
+
+@import "../bootstrap/scss/maps";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/utilities";
+
+// Layout & components
+@import "../bootstrap/scss/root";
+@import "../bootstrap/scss/reboot";
+@import "../bootstrap/scss/type";
+@import "../bootstrap/scss/images";
+@import "../bootstrap/scss/containers";
+@import "../bootstrap/scss/grid";
+@import "../bootstrap/scss/tables";
+@import "../bootstrap/scss/forms";
+@import "../bootstrap/scss/buttons";
+@import "../bootstrap/scss/transitions";
+@import "../bootstrap/scss/dropdown";
+@import "../bootstrap/scss/button-group";
+@import "../bootstrap/scss/nav";
+@import "../bootstrap/scss/navbar";
+@import "../bootstrap/scss/card";
+@import "../bootstrap/scss/accordion";
+@import "../bootstrap/scss/breadcrumb";
+@import "../bootstrap/scss/pagination";
+@import "../bootstrap/scss/badge";
+@import "../bootstrap/scss/alert";
+@import "../bootstrap/scss/progress";
+@import "../bootstrap/scss/list-group";
+@import "../bootstrap/scss/close";
+@import "../bootstrap/scss/toasts";
+@import "../bootstrap/scss/modal";
+@import "../bootstrap/scss/tooltip";
+@import "../bootstrap/scss/popover";
+@import "../bootstrap/scss/carousel";
+@import "../bootstrap/scss/spinners";
+@import "../bootstrap/scss/offcanvas";
+@import "../bootstrap/scss/placeholders";
+
+// Helpers
+@import "../bootstrap/scss/helpers";
+
+// Utilities
+@import "../bootstrap/scss/utilities/api";
+// scss-docs-end import-stack
